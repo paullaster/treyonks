@@ -2,10 +2,10 @@
    <div class="landing">
     <div>
       <h1>Welcome to Treyonks Technology Limited</h1>
-      <!-- <p>
+      <p>
         At Treyonks Technology Limited, we specialize in providing comprehensive support and customized solutions for Dynamics Business Central and Dynamics CRM.
-      </p> -->
-      <p class="typing-text">{{ displayedText }}</p>
+      </p>
+      <!--<p class="typing-text">{{ displayedText }}</p>-->
       <div class="call-to-action">
         <v-btn color="primary" large to="/about" class="mr-6">Learn More</v-btn>
         <v-btn color="secondary" large to="/contact">Contact Us</v-btn>

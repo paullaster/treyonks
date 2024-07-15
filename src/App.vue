@@ -20,7 +20,8 @@ body {
 }
 
 h1, h2 {
-  color: #2e3d49;
+  /* color: #0b5b9c; */
+  color: rgb(24, 103, 192);
 }
 
 button {
@@ -29,8 +30,8 @@ button {
 
 .landing {
   background-image: linear-gradient(
-      rgba(0, 123, 255, 0.74), 
-      rgba(0, 123, 255, 0.836)
+      rgba(1, 8, 15, 0.74), 
+      rgba(0, 0, 0, 0.836)
     ),
     url('@/assets/background.jpeg');
   background-size: cover;
