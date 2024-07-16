@@ -8,5 +8,16 @@ export default createVuetify(
     {icons: {
         defaultSet: 'mdi',
       },
+      theme: {
+        themes: {
+          light: {
+            dark: false,
+            colors: {
+              transparent: '#ffffff00',
+             
+            }
+          },
+        }
+      },
     }
 );
