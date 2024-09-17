@@ -19,15 +19,15 @@ body {
   padding: 0;
 }
 
-h1, h2 {
+/* h1, h2 {
   /* color: #0b5b9c; */
-  color: rgb(24, 103, 192);
-}
+  /* color: rgb(24, 103, 192);
+} */
 
-button {
+/* button {
   cursor: pointer;
-}
-
+} */
+/* 
 .landing {
   background-image: linear-gradient(
       rgba(1, 8, 15, 0.74), 
@@ -43,14 +43,14 @@ button {
   text-align: center;
   color: white;
   animation: fadeIn 2s ease-in-out;
-}
+} */
 
-.call-to-action {
+/* .call-to-action {
   margin-top: 20px;
-}
+} */
 
-@keyframes fadeIn {
+/* @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
-}
+}  */
 </style>

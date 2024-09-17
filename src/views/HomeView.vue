@@ -1,35 +1,36 @@
 <template>
    <div class="landing">
     <div>
-      <h1>Welcome to Treyonks Technology Limited</h1>
+      <h3><span>Discover</span> <span>Innovation</span></h3>
       <p>
-        At Treyonks Technology Limited, we specialize in providing comprehensive support and customized solutions for Dynamics Business Central and Dynamics CRM.
+        Empowering your business with personalized Dynamics solutions.
       </p>
-      <!--<p class="typing-text">{{ displayedText }}</p>-->
       <div class="call-to-action">
-        <v-btn color="primary" large to="/about" class="mr-6">Learn More</v-btn>
-        <v-btn color="secondary" large to="/contact">Contact Us</v-btn>
+        <v-btn :color="ColorsHelper.getColor('primary')" large to="/about" class="mr-6">Learn More</v-btn>
       </div>
     </div>
+    <div class="hero-image">
+      <img src="@/assets/Light+Objects+1.png" alt="Hero">
+    </div>
   </div>
-  <v-container>
-    <v-row>
-      <v-col cols="12">
-        <AboutViewVue />
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12">
         <ServiceComponent />
-      </v-col>
-    </v-row>
-  </v-container>
+        <BookDemo />
+        <AboutViewVue />
 </template>
 
 <script setup>
 import ServiceComponent from '@/components/ServicesComponents.vue'
+import BookDemo from '@/components/BookDemo.vue';
 import AboutViewVue from './AboutView.vue'
 import { onMounted, ref } from 'vue';
+import { useDisplay } from 'vuetify/lib/framework.mjs';
+import ColorsHelper from '@/utils/ColorsHelper';
+
+
+// VUETIFY UTILS
+const {
+  mdAndDown
+} = useDisplay();
 
 const text = "At Treyonks Technology Limited, we specialize in providing comprehensive support and customized solutions for Dynamics Business Central and Dynamics CRM.";
 const displayedText = ref("");
@@ -59,34 +60,18 @@ function resetTyping() {
 
 </script>
 <style scoped>
-
-.v-toolbar-title {
-  font-size: 24px;
-  font-weight: bold;
-}
-.typing-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+.landing {
+  background: #dcdcdc;
   text-align: center;
-  background: linear-gradient(135deg, #ece9e6, #ffffff);
+  color: #141414;
 }
-
-.typing-text {
-  font-size: 1.5rem;
-  border-right: 2px solid #2e3d49;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: blink-caret 0.7s step-end infinite;
+.hero-image {
+  position: relative;
+  height: 300px;
 }
-
-@keyframes blink-caret {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #2e3d49;
-  }
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 </style>

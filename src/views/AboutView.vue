@@ -1,31 +1,35 @@
 <template>
-  <v-container class="vision-mission-container">
-    <v-row justify="center">
-      <v-col cols="12" md="8">
-        <div class="content-wrapper">
-          <h1 class="title">Our Vision</h1>
-          <p class="description">
-            To be the leading provider of innovative and tailored Dynamics solutions that empower
-            businesses to reach their full potential and drive sustainable growth.
-          </p>
-          <h1 class="title">Our Mission</h1>
-          <p class="description">
-            At Treyonks Technology Limited, our mission is to deliver exceptional support and customized
-            Dynamics solutions that transform businesses. We strive to understand our clients' unique
-            needs and challenges, offering innovative, reliable, and scalable solutions that enhance
-            efficiency, improve customer engagement, and drive success.
-          </p>
-        </div>
-      </v-col>
-    </v-row>
-  </v-container>
+  <div class="content-wrapper">
+    <p class="description">
+      <span>
+        Vision:
+      </span>
+      <span>
+        To revolutionize the business landscape through innovative Dynamics solutions.
+      </span>
+    </p>
+    <p class="description">
+      <span>Mission:</span>
+      <span>
+        We are more than just a service provider. We are a strategic partner, dedicated to empowering
+      businesses with tailored Dynamics solutions that drive exceptional results. Our unwavering
+      commitment to excellence and our passion for innovation fuel our mission to help clients
+      achieve their ambitious goals.
+      </span>
+    </p>
+    <v-btn :color="ColorsHelper.getColor('primary')">
+      Learn more
+    </v-btn>
+  </div>
 </template>
 
-<script>
+<script setup>
+import ColorsHelper from '@/utils/ColorsHelper';
+
 </script>
 
 <style scoped>
-.vision-mission-container {
+/* .vision-mission-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,6 +55,6 @@
   color: #555;
   line-height: 1.6;
   margin-bottom: 2rem;
-}
+} */
 </style>
 
