@@ -7,9 +7,11 @@
     display: grid;
     grid-template-rows: repeat(auto-fit, minmax(10px, 1fr));
     "
+    id="header-menu-icon"
+    @click="globalStore.setMenuIconStatus"
     >
-        <span class="icon-closed"></span>
-        <span class="icon-closed"></span>
+        <span :class="closed ? `icon-closed header-menu-icon` : ``"></span>
+        <span :class="closed ? `icon-closed header-menu-icon` : ``"></span>
     </div>
    <div v-if="lgAndUp">
     <v-btn text to="/">Home</v-btn>
@@ -21,9 +23,16 @@
 </template>
 <script setup>
 import { useDisplay } from 'vuetify/lib/framework.mjs';
+import { useGlobal } from '@/stores';
+import { storeToRefs } from 'pinia';
 
 // VUETIFY UTILs
 const { lgAndUp, mdAndDown} = useDisplay();
+
+
+// INTERNAL APP STATE
+const globalStore = useGlobal();
+const {closed} = storeToRefs(globalStore);
 
 </script>
 <style scoped>
