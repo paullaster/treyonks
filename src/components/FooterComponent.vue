@@ -39,7 +39,7 @@
       </div>
     </div>
     <div class="newsletter">
-      <p>Sign up for our newsletter Stay updated with trending technology insights</p>
+      <p>Sign up for our newsletter, stay updated with trending technology insights</p>
       <v-form class="my-3">
         <v-text-field v-model="email" label="Email" type="email" required variant="outlined" />
         <v-btn class="ml-2 rounded-pill" :color="ColorsHelper.getColor('primary')">Subscribe</v-btn>
