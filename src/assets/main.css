@@ -4,6 +4,7 @@
 @import './styles//home.css';
 @import './styles//services.css';
 @import './styles/book.css';
+@import './styles/about.css';
 
 /* #app {
   max-width: 1280px;

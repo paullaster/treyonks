@@ -29,8 +29,6 @@
       }
     } 
     & > p {
-        /* margin-top: 16px;
-        font-size: 18px; */
         font-size: 20px;
         font-family: "Roboto", system-ui;
         font-weight: 300;
