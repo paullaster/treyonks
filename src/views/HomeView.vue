@@ -36,30 +36,4 @@ import HomePageDecoImg from "@/assets/Light+Objects+1.png"
 // VUETIFY UTILS
 const { mdAndDown } = useDisplay()
 
-const text =
-  'At Treyonks Technology Limited, we specialize in providing comprehensive support and customized solutions for Dynamics Business Central and Dynamics CRM.'
-const displayedText = ref('')
-const wordIndex = ref(0)
-const words = ref([])
-
-onMounted(() => {
-  words.value = text.split(' ')
-  console.log(words.value)
-  typeWords()
-})
-
-function typeWords() {
-  if (wordIndex.value < words.value.length) {
-    displayedText.value += words.value[wordIndex.value] + ' '
-    wordIndex.value++
-    setTimeout(typeWords, 300) // Adjust the speed here
-  } else {
-    setTimeout(resetTyping, 120000) // Pause before restarting
-  }
-}
-function resetTyping() {
-  displayedText.value = ''
-  wordIndex.value = 0
-  typeWords()
-}
 </script>
