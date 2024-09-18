@@ -11,6 +11,15 @@
 <script setup>
 import HeaderComponent from '@/components/HeaderComponent.vue'
 import FooterComponent from '@/components/FooterComponent.vue'
+import { onMounted } from 'vue';
+import { useGlobal } from './stores';
+
+// STATE
+const globalStore = useGlobal();
+onMounted(()=> {
+  document.addEventListener('click', globalStore.setMenuIconStatus())
+});
+
 </script>
 <style>
 body {

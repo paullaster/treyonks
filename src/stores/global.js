@@ -14,7 +14,11 @@ export const useGlobal = defineStore('global', {
                     this.$patch({
                         closed: !this.closed,
                     })
-                };
+                }else {
+                    this.$patch({
+                        closed: true,
+                    })
+                }
             })
         }
     }
