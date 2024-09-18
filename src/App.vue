@@ -13,7 +13,6 @@
 import HeaderComponent from '@/components/HeaderComponent.vue'
 import FooterComponent from '@/components/FooterComponent.vue'
 import MobileViewNav from './components/MobileViewNav.vue';
-import { onMounted, watch } from 'vue';
 import { useGlobal } from './stores';
 import { storeToRefs } from 'pinia';
 

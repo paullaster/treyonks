@@ -2,13 +2,13 @@
 
    <nav class="mobile-view-nav">
     <ul>
-        <li><router-link>
+        <li><router-link to="/services">
             Services
         </router-link></li>
-        <li><router-link >
+        <li><router-link to="/about">
             About
         </router-link></li>
-        <li><router-link >
+        <li><router-link to="/contact">
             Contacts
         </router-link></li>
     </ul>

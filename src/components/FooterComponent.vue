@@ -6,9 +6,9 @@
     <div class="footer_links">
       <div>
         <h4>Explore</h4>
-        <div>Solutions</div>
-        <div>About us</div>
-        <div>Contacts</div>
+        <div @click="()=>router.push({name: 'services'})">Solutions</div>
+        <div @click="()=>router.push({name: 'about'})">About </div>
+        <div @click="()=>router.push({name: 'contact'})">Contacts</div>
       </div>
       <div>
         <h4>Engage us</h4>
@@ -50,12 +50,14 @@
 </template>
   <script setup>
 import ColorsHelper from '@/utils/ColorsHelper'
+import { useRouter } from 'vue-router';
 import { ref } from 'vue'
+
+
+// ROUTING
+const router = useRouter();
+
+
 
 const email = ref('')
 </script>
-  <style scoped>
-.v-footer {
-  padding: 20px 0;
-}
-</style>

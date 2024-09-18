@@ -1,6 +1,6 @@
 <template>
-  <header id="header-component">
-    <v-toolbar-title>Treyonks Limited</v-toolbar-title>
+  <header id="header-component" :class="closed ? 'header-bg-grey' : ''">
+    <v-toolbar-title @click="()=>router.push({name: 'home'})">Treyonks Limited</v-toolbar-title>
     <div
       v-if="mdAndDown"
       style="display: grid; grid-template-rows: repeat(auto-fit, minmax(10px, 1fr))"
@@ -22,9 +22,13 @@
 import { useDisplay } from 'vuetify/lib/framework.mjs'
 import { useGlobal } from '@/stores'
 import { storeToRefs } from 'pinia'
+import { useRouter } from 'vue-router';
 
 // VUETIFY UTILs
 const { lgAndUp, mdAndDown } = useDisplay()
+
+// ROUTES
+const router = useRouter()
 
 // INTERNAL APP STATE
 const globalStore = useGlobal()
@@ -32,7 +36,6 @@ const { closed } = storeToRefs(globalStore)
 </script>
 <style scoped>
 header {
-  background-color: #dcdcdc;
   color: #141414;
   display: flex;
   justify-content: space-between;
