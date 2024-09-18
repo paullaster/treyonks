@@ -1,0 +1,21 @@
+.contact {
+    padding: 40px 20px;
+    & > .sendto {
+        font-size: 20px;
+        font-weight: 400;
+        font-style: normal;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        line-height: 1;
+        & > span {
+            height: 1px;
+            width: 200px;
+            background-color: #333333;
+        }
+        & > a {
+            text-decoration: none;
+            color: #333333;
+        }
+    }
+}
