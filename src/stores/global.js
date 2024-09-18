@@ -10,7 +10,7 @@ export const useGlobal = defineStore('global', {
     actions: {
         setMenuIconStatus() {
             document.addEventListener('click', (event) => {
-                if(event.target.id === "header-menu-icon") {
+                if (event.target.id === "header-menu-icon" || event.target.id === "top-line" || event.target.id === "bottom-line") {
                     this.$patch({
                         closed: !this.closed,
                     })
