@@ -20,23 +20,6 @@ import { storeToRefs } from 'pinia';
 // STATE
 const globalStore = useGlobal();
 const { closed } = storeToRefs(globalStore);
-onMounted(()=> {
-  document.addEventListener('click', globalStore.setMenuIconStatus())
-});
-
-watch(
-  () => closed,
-  (value) => {
-    const header = document.getElementById('header-component');
-    if (value) {
-      header.style.backgroundColor = '#dcdcdc';
-      document.removeEventListener('click', globalStore.setMenuIconStatus());
-    } else {
-      header.style.backgroundColor = '';
-      document.addEventListener('click', globalStore.setMenuIconStatus());
-    }
-  }
-)
 </script>
 <style>
 body {
