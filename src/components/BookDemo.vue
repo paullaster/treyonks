@@ -1,25 +1,17 @@
 <template>
-    <div class="book_demo">
+    <section class="book_demo">
        <h4>Book a free Consultation</h4>
        <div class="book_button">
-           <button>Book Now</button>
+           <v-btn class="rounded-pill" size="x-large" block :color="ColorsHelper.getColor('header')">Book Now</v-btn>
        </div>
-    </div>
+    </section>
 </template>
 
 <script setup>
+import ColorsHelper from '@/utils/ColorsHelper';
+
 </script>
 
 <style scoped>
-.book_demo {
-    background-image: url("@/assets/Light+Objects+2.png");
-    background-size: cover;
-    margin:0;
-    width: 100%;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 </style>

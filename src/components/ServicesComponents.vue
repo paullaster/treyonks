@@ -27,7 +27,7 @@
           workplace culture. With automated workflows, advanced analytics, and seamless integration,
           we help you attract, develop, and retain top talent.
         </p>
-        <v-btn class="rounded-pill" size="x-large" density="default" variant="outlined" > Talk to an expert </v-btn>
+        <v-btn class="rounded-pill" size="x-large" density="default" variant="outlined" block> Talk to an expert </v-btn>
       </div>
       <div class="service-card">
         <v-img :src="crmsln" class="rounded-lg"/>
@@ -38,7 +38,7 @@
           automated workflows, advanced analytics, and seamless integration, we help you build
           customer loyalty and achieve your business goals.
         </p>
-        <v-btn class="rounded-pill" size="x-large" density="default" variant="outlined" > Talk to an expert </v-btn>
+        <v-btn class="rounded-pill" size="x-large" density="default" variant="outlined" block> Talk to an expert </v-btn>
       </div>
     </div>
    </section>

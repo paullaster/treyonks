@@ -3,7 +3,7 @@
     text-align: center;
     color: #141414;
     padding: 40px 20px;
-    height: 100vh;
+    height: 120vh;
   }
   .hero-image {
     position: relative;
@@ -29,8 +29,14 @@
       }
     } 
     & > p {
-        margin-top: 16px;
-        font-size: 18px;
+        /* margin-top: 16px;
+        font-size: 18px; */
+        font-size: 20px;
+        font-family: "Roboto", system-ui;
+        font-weight: 300;
+        font-style: normal;
+        margin-bottom: 32px;
+        text-align: left;
     }
     & > .call-to-action {
         margin-top: 20px !important;
