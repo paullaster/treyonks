@@ -1,5 +1,5 @@
 .mobile-view-nav {
-    height: 90vh;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,7 +24,5 @@
         position: absolute;
         bottom: 0;
         right: 20%;
-        margin-right: 20px;
-        margin-bottom: 20px;
     }
 }
