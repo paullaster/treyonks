@@ -11,7 +11,6 @@
           class="mr-6 rounded-pill"
           desity="default"
           size="x-large"
-          elevation="8"
           >Learn More</v-btn
         >
       </div>
