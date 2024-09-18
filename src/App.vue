@@ -13,7 +13,7 @@
 import HeaderComponent from '@/components/HeaderComponent.vue'
 import FooterComponent from '@/components/FooterComponent.vue'
 import MobileViewNav from './components/MobileViewNav.vue';
-import { onMounted } from 'vue';
+import { onMounted, watch } from 'vue';
 import { useGlobal } from './stores';
 import { storeToRefs } from 'pinia';
 
@@ -24,6 +24,19 @@ onMounted(()=> {
   document.addEventListener('click', globalStore.setMenuIconStatus())
 });
 
+watch(
+  () => closed,
+  (value) => {
+    const header = document.getElementById('header-component');
+    if (value) {
+      header.style.backgroundColor = '#dcdcdc';
+      document.removeEventListener('click', globalStore.setMenuIconStatus());
+    } else {
+      header.style.backgroundColor = '';
+      document.addEventListener('click', globalStore.setMenuIconStatus());
+    }
+  }
+)
 </script>
 <style>
 body {

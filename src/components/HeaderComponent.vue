@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header id="header-component">
     <v-toolbar-title>Treyonks Limited</v-toolbar-title>
     <div
       v-if="mdAndDown"
