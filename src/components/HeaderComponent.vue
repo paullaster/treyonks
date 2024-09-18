@@ -1,5 +1,5 @@
 <template>
-  <header id="header-component" :class="closed ? 'header-bg-grey' : ''">
+  <header id="header-component" :class="closed && route.name === 'home' ? 'header-bg-grey' : ''">
     <v-toolbar-title @click="()=>router.push({name: 'home'})">Treyonks Limited</v-toolbar-title>
     <div
       v-if="mdAndDown"
@@ -22,13 +22,14 @@
 import { useDisplay } from 'vuetify/lib/framework.mjs'
 import { useGlobal } from '@/stores'
 import { storeToRefs } from 'pinia'
-import { useRouter } from 'vue-router';
+import { useRouter, useRoute } from 'vue-router';
 
 // VUETIFY UTILs
 const { lgAndUp, mdAndDown } = useDisplay()
 
 // ROUTES
 const router = useRouter()
+const route = useRoute()
 
 // INTERNAL APP STATE
 const globalStore = useGlobal()

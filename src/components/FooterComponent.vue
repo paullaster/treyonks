@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <div class="company">
+    <div class="company" @click="()=>router.push({name: 'home'})">
       <h1>Treyonks Limited</h1>
     </div>
     <div class="footer_links">
