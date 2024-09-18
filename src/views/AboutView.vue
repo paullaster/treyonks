@@ -1,5 +1,6 @@
 <template>
-  <div class="content-wrapper">
+  <section class="about">
+    <h2>{{ Aboutheading }}</h2>
     <p class="description">
       <span>
         Vision:
@@ -17,44 +18,19 @@
       achieve their ambitious goals.
       </span>
     </p>
-    <v-btn :color="ColorsHelper.getColor('primary')">
+    <v-btn :color="ColorsHelper.getColor('primary')" block class="rounded-pill" size="x-large">
       Learn more
     </v-btn>
-  </div>
+  </section>
 </template>
 
 <script setup>
 import ColorsHelper from '@/utils/ColorsHelper';
+import { computed } from 'vue';
 
+const Aboutheading = computed(()=> {
+  return  window.location.href.includes('/about') ?
+   'Who we are':'About our brand';
+})
 </script>
-
-<style scoped>
-/* .vision-mission-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 20px;
-  text-align: center;
-}
-
-.content-wrapper {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 8px;
-}
-
-.title {
-  font-size: 2.5rem;
-  color: #2e3d49;
-  margin-bottom: 1rem;
-}
-
-.description {
-  font-size: 1.2rem;
-  color: #555;
-  line-height: 1.6;
-  margin-bottom: 2rem;
-} */
-</style>
 
