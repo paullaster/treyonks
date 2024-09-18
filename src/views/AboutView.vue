@@ -1,7 +1,7 @@
 <template>
   <section class="about">
     <h2>{{ Aboutheading }}</h2>
-    <p class="about_description">
+    <!-- <p class="about_description">
       <span class="key_text">
         Vision:
       </span>
@@ -17,6 +17,12 @@
       commitment to excellence and our passion for innovation fuel our mission to help clients
       achieve their ambitious goals.
       </span>
+    </p> -->
+    <p>
+      We are more than just a service provider. We are a strategic partner, dedicated to empowering
+      businesses with tailored Dynamics solutions that drive exceptional results. Our unwavering
+      commitment to excellence and our passion for innovation fuel our mission to help clients
+      achieve their ambitious goals.
     </p>
     <v-btn :color="ColorsHelper.getColor('primary')" block class="rounded-pill" size="x-large">
       Learn more

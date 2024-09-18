@@ -7,17 +7,17 @@
         margin-top: 40px;
         margin-bottom: 40px;
     }
-    & > .about_description {
+    & > p {
         font-size: 20px;
         font-family: "Roboto", system-ui;
-        font-weight: 100 !important;
+        font-weight: 300 !important;
         font-style: normal;
         margin-bottom: 32px;
-        & > .key_text {
+        /* & > .key_text {
             font-weight: 700;
         }
         & > .value_text {
             font-weight: 300;
-        }
+        } */
     }
 }

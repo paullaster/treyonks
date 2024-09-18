@@ -8,6 +8,10 @@ class ColorHelper {
         header: "#dcdcdc",
         textColor: "#141414",
         primary:"#333333",
+        linkedin: '#0077B5',
+        instagram: '#E1306C',
+        x: '#000000',
+        email: '#BB001B',
     }[arg];
  }
 }
