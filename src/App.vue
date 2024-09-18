@@ -1,21 +1,25 @@
 <template>
   <v-app>
     <HeaderComponent />
-    <v-main>
+    <MobileViewNav v-if="!closed"/>
+    <v-main v-if="closed">
       <router-view />
     </v-main>
-    <FooterComponent />
+    <FooterComponent v-if="closed"/>
   </v-app>
 </template>
 
 <script setup>
 import HeaderComponent from '@/components/HeaderComponent.vue'
 import FooterComponent from '@/components/FooterComponent.vue'
+import MobileViewNav from './components/MobileViewNav.vue';
 import { onMounted } from 'vue';
 import { useGlobal } from './stores';
+import { storeToRefs } from 'pinia';
 
 // STATE
 const globalStore = useGlobal();
+const { closed } = storeToRefs(globalStore);
 onMounted(()=> {
   document.addEventListener('click', globalStore.setMenuIconStatus())
 });

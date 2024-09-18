@@ -6,6 +6,7 @@
 @import './styles/book.css';
 @import './styles/about.css';
 @import './styles//footer.css';
+@import './styles//mobileviewnav.css';
 
 /* #app {
   max-width: 1280px;

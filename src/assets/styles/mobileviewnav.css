@@ -1,0 +1,30 @@
+.mobile-view-nav {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    & > ul {
+        & > li {
+            list-style: none;
+            width: 250px;
+            text-align: center;
+            & > a {
+                color: #333333;
+                font-size: 30px;
+                font-weight: 400;
+                font-style: normal;
+                margin-bottom: 10px;
+                text-decoration: none;
+            }
+        }
+    }
+    .button-position {
+        position: absolute;
+        bottom: 0;
+        right: 20%;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+}
