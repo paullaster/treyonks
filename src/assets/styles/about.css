@@ -22,7 +22,7 @@
     align-items: center;
     & > .about_img_card {
         width: 50%;
-        margin-right: 20px;
+        margin-right: 40px;
     }
     & > .about_description {
         width: 50%;
