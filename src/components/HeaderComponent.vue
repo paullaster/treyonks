@@ -1,14 +1,5 @@
 <template>
-  <header
-    id="header-component"
-    :class="
-      closed && route.name === 'home'
-        ? mdAndDown
-          ? 'header header-mobile header-bg-grey'
-          : 'header header-desktop header-bg-grey'
-        : ''
-    "
-  >
+  <header id="header-component" :class="className">
     <v-toolbar-title @click="() => router.push({ name: 'home' })">Treyonks Limited</v-toolbar-title>
     <div
       v-if="mdAndDown"
@@ -41,6 +32,7 @@ import { useGlobal } from '@/stores'
 import { storeToRefs } from 'pinia'
 import { useRouter, useRoute } from 'vue-router'
 import ColorsHelper from '@/utils/ColorsHelper'
+import { ref, watch } from 'vue'
 
 // VUETIFY UTILs
 const { lgAndUp, mdAndDown } = useDisplay()
@@ -49,9 +41,34 @@ const { lgAndUp, mdAndDown } = useDisplay()
 const router = useRouter()
 const route = useRoute()
 
-// INTERNAL APP STATE
+// INTERNAL APP STORE
 const globalStore = useGlobal()
 const { closed } = storeToRefs(globalStore)
+
+// STATE
+const className = ref('')
+watch(
+  () => [route.name, closed.value, mdAndDown],
+  () => {
+    getClassName()
+  },
+  { immediate: true, deep: true }
+)
+function getClassName() {
+  className.value = ''
+  if (route.name === 'home') {
+    if (closed.value) {
+      className.value = 'header header-bg-grey'
+    } else {
+      className.value = 'header'
+    }
+  }
+  if (mdAndDown) {
+    className.value += ' header-mobile'
+  } else {
+    className.value += ' header-desktop'
+  }
+}
 </script>
 <style scoped>
 .header {

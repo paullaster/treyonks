@@ -1,11 +1,13 @@
 <template>
    <section :class="onServicePage ? `services` : `services`">
-    <h2 class="section-heading">Our Services</h2>
+    <div>
+      <h2 class="section-heading">Our Services</h2>
     <p class="service-intro">
       Transform your business with our unparalleled Microsoft 365 Dynamics and CRM solutions. From strategic finance and
       HR to streamlined operations and customer engagement, we deliver tailored, innovative
       solutions that empower you to achieve exceptional results.
     </p>
+    </div>
     <div class="services-container">
       <div class="service-card">
         <v-img :src="financesln" class="rounded-lg"></v-img>
@@ -49,6 +51,9 @@ import financesln from '@/assets/finance_sln.png'
 import hrslns from '@/assets/Light+Objects+1.png'
 import crmsln from '@/assets/crm_sln.png'
 import { computed } from 'vue';
+import { useDisplay } from 'vuetify/lib/framework.mjs';
+
+
 
 
 const onServicePage = computed(() => {
