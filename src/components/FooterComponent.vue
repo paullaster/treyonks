@@ -1,6 +1,6 @@
 <template>
-  <footer class="footer">
-    <div  class="footer-container">
+  <footer :class="mdAndDown ? 'footer mobile_view' : 'footer desktop_view'">
+    <div  :class="mdAndDown ? 'footer-container footer_mobile_view':'footer-container footer_desktop_view'">
       <div class="company_container">
         <div class="company" @click="() => router.push({ name: 'home' })">
           <h1>Treyonks Limited</h1>
@@ -64,6 +64,9 @@
 import ColorsHelper from '@/utils/ColorsHelper'
 import { useRouter } from 'vue-router'
 import { ref } from 'vue'
+import { useDisplay } from 'vuetify/lib/framework.mjs';
+
+const { mdAndDown } = useDisplay()
 
 // ROUTING
 const router = useRouter()

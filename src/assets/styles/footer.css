@@ -1,40 +1,74 @@
 .footer {
-    padding: 40px 120px;
     display: flex;
     flex-direction: column;
-    & > div > div > .company {
-        font-size: 20px;
-        font-weight: 400;
-        font-style: normal;
-        margin-bottom: 20px;
-    }
-    & > .footer_links {
-        margin-bottom: 40px;
-        display: flex;
-        align-items: center;
-        & > div {
-            width: 50%;
-            & > h4 {
-                font-size: 20px;
-                font-weight: 500;
-                font-style: normal;
-                margin-bottom: 10px;
-            }
-        }
-        a { 
-            color: #333;
-            text-decoration: none;
-            margin-right: 20px;
-        }
-    }
-    & > .newsletter {
-        margin-bottom: 20px !important;
-        margin-top: 20px !important;
-    }
 }
 
+.mobile_view {
+    padding: 40px 20px;
+}
+
+.desktop_view {
+    padding: 40px 120px;
+}
 .footer-container {
     display: flex;
+    
+}
+
+.newsletter {
+    margin-bottom: 20px !important;
+    margin-top: 20px !important;
+    width: 64%;
+}
+.footer_mobile_view {
+    flex-direction: column;
+    &  > .company_container {
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        padding: 40px 0;
+    }
+    & > .link_container {
+        width: 100%;
+        & > .footer_links {
+            display: flex;
+            margin-bottom: 20px;
+            & > .link_holder {
+                width: 50%;
+                padding-left: 20px;
+                & > h4 {
+                    font-size: 20px;
+                    font-weight: 500;
+                    font-style: normal;
+                    margin-bottom: 10px;
+                }
+                & > div {
+                    cursor: pointer;
+                }
+            }
+            & > .social_holder {
+                padding-left: 62px;
+                width: 50%;
+                margin-left: 20px;
+                & > h4 {
+                    font-size: 20px;
+                    font-weight: 500;
+                    font-style: normal;
+                    margin-bottom: 10px;
+                }
+                a { 
+                    color: #333;
+                    text-decoration: none;
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+    .newsletter {
+        width: 100%;
+    }
+}
+.footer_desktop_view {
     &  > .company_container {
         width: 45%;
         margin-right: 5%;
@@ -79,8 +113,33 @@
     }
 }
 
-.newsletter {
+
+/* & > div > div > .company {
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 20px;
+}
+& > .footer_links {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    & > div {
+        width: 50%;
+        & > h4 {
+            font-size: 20px;
+            font-weight: 500;
+            font-style: normal;
+            margin-bottom: 10px;
+        }
+    }
+    a { 
+        color: #333;
+        text-decoration: none;
+        margin-right: 20px;
+    }
+}
+& > .newsletter {
     margin-bottom: 20px !important;
     margin-top: 20px !important;
-    width: 64%;
-}
+} */
