@@ -41,6 +41,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
     }
     & > .link_container {
         width: 50%;
@@ -49,11 +50,25 @@
             margin-bottom: 20px;
             & > .link_holder {
                 width: 50%;
-               
+                & > h4 {
+                    font-size: 20px;
+                    font-weight: 500;
+                    font-style: normal;
+                    margin-bottom: 10px;
+                }
+                & > div {
+                    cursor: pointer;
+                }
             }
             & > .social_holder {
                 width: 50%;
                 margin-left: 20px;
+                & > h4 {
+                    font-size: 20px;
+                    font-weight: 500;
+                    font-style: normal;
+                    margin-bottom: 10px;
+                }
                 a { 
                     color: #333;
                     text-decoration: none;

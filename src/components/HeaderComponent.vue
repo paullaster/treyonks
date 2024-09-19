@@ -75,6 +75,7 @@ function getClassName() {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  cursor: pointer;
 }
 .header-mobile {
   padding: 40px 20px;
