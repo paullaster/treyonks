@@ -1,6 +1,10 @@
 <template>
-  <section class="about">
-    <h2>{{ Aboutheading }}</h2>
+  <section :class="lgAndUp ? 'about_Desktop' :'about'">
+    <div v-if="lgAndUp" class="about_img_card">
+      <v-img :src="aboutIMG"></v-img>
+    </div>
+    <div class="about_description">
+      <h2>{{ Aboutheading }}</h2>
     <!-- <p class="about_description">
       <span class="key_text">
         Vision:
@@ -24,16 +28,23 @@
       commitment to excellence and our passion for innovation fuel our mission to help clients
       achieve their ambitious goals.
     </p>
-    <v-btn :color="ColorsHelper.getColor('primary')" block class="rounded-pill" size="x-large">
+    <v-btn :color="ColorsHelper.getColor('primary')" :block="!lgAndUp" class="rounded-pill" size="x-large">
       Learn more
     </v-btn>
+    </div>
   </section>
 </template>
 
 <script setup>
 import ColorsHelper from '@/utils/ColorsHelper';
 import { computed } from 'vue';
+import aboutIMG from "@/assets/Light+Objects+2.png";
+import { useDisplay } from 'vuetify/lib/framework.mjs';
 
+
+
+//VUETIFY
+const {lgAndUp} = useDisplay();
 const Aboutheading = computed(()=> {
   return  window.location.href.includes('/about') ?
    'Who we are':'About our brand';
