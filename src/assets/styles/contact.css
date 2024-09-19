@@ -21,11 +21,47 @@
 
 .contact_mobile {
     padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    & > .contact_text_section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        & > .contact_headline {
+           & > h2 {
+            font-size: 40px;
+            font-weight: 400;
+           }
+           & > p {
+            font-size: 20px;
+            font-weight: 300;
+            margin-bottom: 20px;
+           }
+        }
+        & > .sendto {
+            font-size: 20px;
+            font-weight: 400;
+            font-style: normal;
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+            & > span {
+                height: 1px;
+                width: 200px;
+                background-color: #333333;
+            }
+            & > a {
+                text-decoration: none;
+                color: #333333;
+            }
+        }
+    }
 }
 
 .contact_desktop {
     padding: 40px 120px;
-
     display: flex;
 
     & > .contact_text_section {
