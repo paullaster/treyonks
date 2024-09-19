@@ -63,7 +63,7 @@ function getClassName() {
       className.value = 'header'
     }
   }
-  if (mdAndDown) {
+  if (mdAndDown.value) {
     className.value += ' header-mobile'
   } else {
     className.value += ' header-desktop'
