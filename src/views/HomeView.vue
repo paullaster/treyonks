@@ -1,5 +1,5 @@
 <template>
-  <div class="landing">
+  <div :class="mdAndDown ? `landing mobile-lading` : `landing desktop_landing`">
     <div class="landing-section-1">
       <h3><span>Discover</span> <span>Innovation</span></h3>
       <p>Empowering your business with personalized Microsoft 365 Dynamics and CRM solutions.</p>
@@ -16,7 +16,7 @@
       </div>
     </div>
     <div class="hero-image">
-      <v-img :src="HomePageDecoImg" alt="Hero" height="480px" class="rounded-lg"></v-img>
+      <v-img :src="HomePageDecoImg" alt="Hero" height="100%" class="rounded-lg"></v-img>
     </div>
   </div>
   <ServiceComponent />
@@ -28,7 +28,6 @@
 import ServiceComponent from '@/components/ServicesComponents.vue'
 import BookDemo from '@/components/BookDemo.vue'
 import AboutViewVue from './AboutView.vue'
-import { onMounted, ref } from 'vue'
 import { useDisplay } from 'vuetify/lib/framework.mjs'
 import ColorsHelper from '@/utils/ColorsHelper'
 import HomePageDecoImg from "@/assets/Light+Objects+1.png"
