@@ -26,3 +26,14 @@
         right: 20%;
     }
 }
+.big-screen-view {
+    display: flex;
+    align-items: center;
+    & > a {
+        color: #333333;
+        text-decoration: none;
+        font-size: 16px;
+        display: block;
+        margin-inline: 40px;
+    }
+  }

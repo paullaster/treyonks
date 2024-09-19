@@ -10,11 +10,13 @@
       <span id="top-line" :class="closed ? `icon top-closed header-menu-icon` : `icon top-open`"></span>
       <span id="bottom-line" :class="closed ? `icon bottom-closed header-menu-icon` : `icon bottom-open`"></span>
     </div>
-    <div v-if="lgAndUp">
-      <v-btn text to="/">Home</v-btn>
-      <v-btn text to="/about">About Us</v-btn>
-      <v-btn text to="/services">Services</v-btn>
-      <v-btn text to="/contact">Contact</v-btn>
+    <div v-if="lgAndUp" class="big-screen-view">
+      <router-link to="/services" >Services</router-link>
+      <router-link  to="/about">About</router-link>
+      <router-link to="/contact">Contact</router-link>
+      <v-btn class="rounded-pill" :color="ColorsHelper.getColor('primary')" size="x-large">
+        Request a demo
+      </v-btn>
     </div>
   </header>
 </template>
@@ -23,6 +25,7 @@ import { useDisplay } from 'vuetify/lib/framework.mjs'
 import { useGlobal } from '@/stores'
 import { storeToRefs } from 'pinia'
 import { useRouter, useRoute } from 'vue-router';
+import ColorsHelper from '@/utils/ColorsHelper';
 
 // VUETIFY UTILs
 const { lgAndUp, mdAndDown } = useDisplay()
