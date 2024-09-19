@@ -55,12 +55,10 @@ watch(
   { immediate: true, deep: true }
 )
 function getClassName() {
-  className.value = ''
+  className.value = 'header'
   if (route.name === 'home') {
     if (closed.value) {
-      className.value = 'header header-bg-grey'
-    } else {
-      className.value = 'header'
+      className.value += ' header-bg-grey'
     }
   }
   if (mdAndDown.value) {
