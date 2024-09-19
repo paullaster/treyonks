@@ -50,7 +50,7 @@
           <p>Sign up for our newsletter, stay updated with trending technology insights</p>
           <v-form class="my-3">
             <v-text-field v-model="email" label="Email" type="email" required variant="outlined" />
-            <v-btn class="ml-2 rounded-pill" :color="ColorsHelper.getColor('primary')"
+            <v-btn class="ml-2 rounded-pill" :color="ColorsHelper.getColor('primary')" width="200px" height="50px"
               >Subscribe</v-btn
             >
           </v-form>
