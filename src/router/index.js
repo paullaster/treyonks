@@ -26,11 +26,18 @@ const router = createRouter({
     }
   ],
   scrollBehavior (to, from, savedPosition) {
-    if (savedPosition) {
-      return savedPosition
-    } else {
-      return { top: 0 }
-    }
+    return new Promise((resolve, /*reject*/) => {
+      setTimeout(() => {
+        if (savedPosition) {
+          return resolve(savedPosition)
+        }
+        if (to.hash) {
+          resolve({ selector: to.hash })
+        } else {
+          resolve({ left: 0, top: 0 })
+        }
+      }, 500)
+    })
   }
 })
 
