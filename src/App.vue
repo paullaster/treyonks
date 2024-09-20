@@ -3,7 +3,11 @@
     <HeaderComponent />
     <MobileViewNav v-if="!closed"/>
     <v-main v-if="closed">
-      <router-view />
+      <router-view v-slot="{Component, route}">
+        <transition name="fade">
+        <component :is="Component" :key="route.path"></component>
+        </transition>
+      </router-view>
     </v-main>
     <FooterComponent v-if="closed"/>
   </v-app>
