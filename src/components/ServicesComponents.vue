@@ -1,70 +1,82 @@
 <template>
-   <section :class="mdAndDown ? `services` : `services-desktop`">
-    <div>
-      <h2 class="section-heading">Our Services</h2>
-    <p class="service-intro">
-      Transform your business with our unparalleled Microsoft 365 Dynamics and CRM solutions. From strategic finance and
-      HR to streamlined operations and customer engagement, we deliver tailored, innovative
-      solutions that empower you to achieve exceptional results.
-    </p>
-    </div>
-    <div class="services-container">
-      <div class="service-card">
-        <div class="image-card"><v-img :src="financesln" class="rounded-lg"></v-img></div>
-       <div class="service-card-description">
-        <h5>Master Your Finances</h5>
-        <p>
-          Our tailored finance management solutions, powered by Dynamics 365, provide you with the
-          tools to streamline your operations, optimize cash flow, and make data-driven decisions.
-          With real-time insights, automated workflows, and seamless integration, we help you
-          achieve financial excellence.
-        </p>
-        <v-btn class="rounded-pill" size="x-large" density="default" variant="outlined" block > Talk to an expert </v-btn>
-       </div>
-      </div>
-      <div class="service-card">
-        <div class="image-card">
-          <v-img :src="hrslns" class="rounded-lg"/>
+    <section class="bg-gradient-to-br from-blue-900 to-indigo-900 py-16 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-4xl font-extrabold text-white text-center mb-12">Our Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div v-for="service in services" :key="service.title" class="relative group">
+            <div class="absolute inset-0 bg-white rounded-lg shadow-lg transition duration-300 ease-in-out transform group-hover:scale-105"></div>
+            <div class="relative p-6 flex flex-col h-full">
+              <div class="flex-1">
+                <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full">
+                  <component :is="service.icon" class="w-8 h-8" />
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 text-center mb-4">{{ service.title }}</h3>
+                <p class="text-gray-600 text-center mb-6">{{ service.description }}</p>
+              </div>
+              <ul class="space-y-2">
+                <li v-for="feature in service.features" :key="feature" class="flex items-center text-gray-700">
+                  <CheckIcon class="w-5 h-5 mr-2 text-green-500" />
+                  {{ feature }}
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="service-card-description">
-          <h5>Elevate Your Workforce</h5>
-          <p>
-            Our tailored HR solutions, powered by Dynamics 365, provide you with the tools to
-            streamline your HR processes, optimize employee engagement, and foster a thriving
-            workplace culture. With automated workflows, advanced analytics, and seamless integration,
-            we help you attract, develop, and retain top talent.
-          </p>
-          <v-btn class="rounded-pill" size="x-large" density="default" variant="outlined" block> Talk to an expert </v-btn>
+        <div class="mt-16 text-center">
+          <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition duration-300 ease-in-out transform hover:scale-105">
+            Learn More
+            <ArrowRightIcon class="ml-2 w-5 h-5" />
+          </a>
         </div>
       </div>
-      <div class="service-card">
-        <div class="image-card">
-          <v-img :src="crmsln" class="rounded-lg"/>
-        </div>
-        <div class="service-card-description">
-          <h5>CRM Solutions</h5>
-          <p>
-            Our tailored CRM solutions, provide you with the tools to nurture
-            lasting relationships, drive sales, and deliver exceptional customer experiences. With
-            automated workflows, advanced analytics, and seamless integration, we help you build
-            customer loyalty and achieve your business goals.
-          </p>
-          <v-btn class="rounded-pill" size="x-large" density="default" variant="outlined" block> Talk to an expert </v-btn>
-        </div>
-      </div>
-    </div>
-   </section>
-</template>
+    </section>
+  </template>
   
   <script setup>
-import financesln from '@/assets/finance_sln.png'
-import hrslns from '@/assets/Light+Objects+1.png'
-import crmsln from '@/assets/crm_sln.png'
-import { useDisplay } from 'vuetify/lib/framework.mjs';
-
-
-const { mdAndDown } = useDisplay();
-
-</script>
-
+  import { ref } from 'vue';
+  import { DollarSignIcon, UsersIcon, BarChartIcon, CheckIcon, ArrowRightIcon } from 'lucide-vue-next';
   
+  const services = ref([
+    {
+      title: 'Finance Management',
+      description: 'Streamline your financial processes with our cutting-edge solutions integrated with Microsoft Dynamics 365.',
+      icon: DollarSignIcon,
+      features: [
+        'Real-time financial reporting',
+        'Automated invoice processing',
+        'Cash flow forecasting',
+      ],
+    },
+    {
+      title: 'HR Solutions',
+      description: 'Empower your HR team with our user-friendly portals and Microsoft Dynamics 365 integration.',
+      icon: UsersIcon,
+      features: [
+        'Employee self-service portal',
+        'Performance management',
+        'Recruitment and onboarding automation',
+      ],
+    },
+    {
+      title: 'CRM Solutions',
+      description: 'Elevate your customer relationships with our CRM solutions built on Microsoft Dynamics 365.',
+      icon: BarChartIcon,
+      features: [
+        '360-degree customer view',
+        'Sales pipeline management',
+        'Marketing automation integration',
+      ],
+    },
+  ]);
+  </script>
+  
+  <style scoped>
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  .group:hover .w-16 {
+    animation: float 2s ease-in-out infinite;
+  }
+  </style>

@@ -25,7 +25,7 @@ const router = createRouter({
       component: () => import('../components/ContactFormComponent.vue')
     }
   ],
-  scrollBehavior (to, from, savedPosition) {
+  scrollBehavior(to, from, savedPosition) {
     return new Promise((resolve, /*reject*/) => {
       setTimeout(() => {
         if (savedPosition) {
