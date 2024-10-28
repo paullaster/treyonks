@@ -5,7 +5,7 @@
         <!-- Logo -->
         <div class="flex-shrink-0">
           <a href="/" class="text-2xl font-bold text-gray-800 hover:text-indigo-600 transition duration-300 flex">
-            <img :src="LogoPNG" alt="treyonks technology limited logo" class="h-10">
+            <img :src="logo" alt="treyonks technology limited logo" class="h-10">
             <span class="text-2xl font-bold text-gray-800 hover:text-indigo-600 transition duration-300">Treyonks Limited</span>
           </a>
         </div>
@@ -68,7 +68,10 @@
 <script setup>
 import { ref } from 'vue';
 import { MenuIcon, XIcon } from 'lucide-vue-next';
-import LogoPNG from "@/assets/logo.clear.png";
+import logo from "@/assets/logo.svg";
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
 
 const navItems = [
   { name: 'Services', href: '/services', current: false },
@@ -83,8 +86,7 @@ const toggleMobileMenu = () => {
 };
 
 const requestDemo = () => {
-  // Implement your demo request logic here
-  console.log('Demo requested');
+  router.push({name: 'contact'});
 };
 </script>
 

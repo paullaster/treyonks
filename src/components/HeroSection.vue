@@ -11,7 +11,7 @@
               Empowering your business with personalized Microsoft 365 Dynamics and CRM solutions.
             </p>
             <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in-delay-2">
-              <a href="#services" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-300 ease-in-out transform hover:scale-105">
+              <a href="/services" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-300 ease-in-out transform hover:scale-105">
                 Our Services
               </a>
               <button @click="learnMore" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-300 ease-in-out transform hover:scale-105">
@@ -32,9 +32,12 @@
   
   <script setup>
   import HomePageDecoImg from '@/assets/Light+Objects+1.png'
+  import { useRouter } from 'vue-router';
+
+  const router = useRouter();
+
   const learnMore = () => {
-    // Implement your learn more logic here
-    console.log('Learn More clicked');
+    router.push({name: 'contact'  });
   };
   </script>
   

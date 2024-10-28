@@ -23,7 +23,7 @@
           </div>
         </div>
         <div class="mt-16 text-center">
-          <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition duration-300 ease-in-out transform hover:scale-105">
+          <a href="/contact" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition duration-300 ease-in-out transform hover:scale-105">
             Learn More
             <ArrowRightIcon class="ml-2 w-5 h-5" />
           </a>

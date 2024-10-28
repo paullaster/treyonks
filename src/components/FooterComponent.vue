@@ -60,7 +60,7 @@
 <script setup>
 import { ref } from 'vue';
 import { FacebookIcon, TwitterIcon, InstagramIcon, LinkedinIcon } from 'lucide-vue-next';
-import LogoPngClear from "@/assets/logo.clear.png";
+import LogoPngClear from "@/assets/logo.svg";
 
 const exploreLinks = [
   { text: 'Home', url: '/' },
