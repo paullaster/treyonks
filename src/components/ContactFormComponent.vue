@@ -16,11 +16,11 @@
             </div>
             <div class="flex items-center">
               <PhoneIcon class="w-6 h-6 mr-4" />
-              <p>(+2547) 25 863023</p>
+              <p>(+2547) 33 300272</p>
             </div>
             <div class="flex items-center">
               <MailIcon class="w-6 h-6 mr-4" />
-              <p>cmakau@treyonks.com</p>
+              <p>chris.makau@treyonks.com</p>
             </div>
           </div>
         </div>
